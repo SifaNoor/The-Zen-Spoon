@@ -300,6 +300,31 @@ nav {
   padding-top: 10px;
 }
 
+/* Card Styling After Buttons Are Added */
+.cardbottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.addbutton {
+  font-family: "Cormorant Garamond", serif;
+  color: white;
+  background-color: #867266;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addbutton:hover {
+  background-color: #c7ab9b;
+  transform: translateY(-3px);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
 @media screen and (max-width: 700px) {
   .card {
       width: 100%;
