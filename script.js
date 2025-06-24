@@ -86,9 +86,15 @@ const overlay = document.getElementById('overlay');
 
 cartIcon.addEventListener('click', function(e) {
   e.preventDefault();
+  e.stopPropagation();
   shoppingSidebar.classList.add('open');
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+});
+
+const cartLink = document.getElementById('cartlink');
+cartLink.addEventListener('click', function(e) {
+  e.preventDefault();
 });
 
 exitCart.addEventListener('click', function() {
@@ -104,7 +110,7 @@ overlay.addEventListener('click', function() {
 })
 
 clearButton.addEventListener('click', function() {
-  if (confirm('Are you sure you want to empty your cart?')) {
+  if (confirm('Please confirm you want to clear your cart.')) {
     clearCart();
   }
 });
